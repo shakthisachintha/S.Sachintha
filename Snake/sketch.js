@@ -1,11 +1,13 @@
  var multi = 15;
- var speed = 1;
+ var speed = 10;
  var food;
  var pause = 0;
  var framerate = 10;
  var cnv;
  var s;
  var gameon = 1;
+ var level = 1;
+
 
  function setup() {
 
@@ -14,10 +16,8 @@
      noStroke();
      cnv.parent('cnv-container');
      s = new snake();
-     frameRate(100);
-
+     frameRate(framerate);
      getloc();
-
  }
 
  function draw() {
@@ -40,6 +40,17 @@
      textAlign(CENTER);
      textFont("Comic Sans MS");
      textSize(20);
-     text("Score :  " + s.total, 290, 19);
+     text("Level : " + level, 50, 19);
 
+     fill(10, 200, 120);
+     textAlign(CENTER);
+     textFont("Comic Sans MS");
+     textSize(20);
+     text("Score :  " + s.total, 280, 19);
+
+     fill(10, 200, 120);
+     textAlign(CENTER);
+     textFont("Comic Sans MS");
+     textSize(15);
+     text("Pause: P  Restart: R", 522, 19);
  }

@@ -3,8 +3,8 @@ function run() {
 
     } else {
 
-        background(95);
-        fill(200);
+        background(50);
+        fill(12);
         rect(-1, -1, 601, 30);
 
         s.show();
@@ -65,12 +65,14 @@ function keyPressed() {
         }
 
 
-    } else if (keyCode === 65) {
+    } else if (keyCode === 80) {
         if (pause === 1) {
             pause = 0;
         } else {
             pause = 1;
         }
+    } else if (keyCode === 82) {
+        window.location.reload(true);
     }
 }
 
@@ -109,10 +111,11 @@ function snake() {
         if (d < 15) {
 
             this.total++;
-            if (this.total > 0 && this.total % 2 === 0) {
+            if (this.total > 0 && this.total % 5 === 0) {
 
                 speed = speed + 1
-                console.log(speed);
+                level = level + 1;
+                framerate = framerate + 5;
 
             }
             return true;
