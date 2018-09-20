@@ -1,2 +1,2 @@
 # S.Sachintha
-[Product Name]
+[Snake Game]
